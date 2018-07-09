@@ -1,46 +1,53 @@
 import java.lang.reflect.Type;
 import java.text.MessageFormat;
+import java.util.Scanner;
 
 public class Main
 {
     public static void main( String [] args )
     {
-        int i = 0;
         ContactsManager myContactManager = new ContactsManager();
-        Contact firstContact = new Contact();
-        Contact secondContact = new Contact();
-        Contact thirdContact = new Contact();
-        Contact fourthContact = new Contact();
-
-        firstContact.name = "Hayden";
-        firstContact.email = "example0@gmail.com";
-        firstContact.phoneNumber = "555-555-4321";
-
-        secondContact.name = "Andrew";
-        secondContact.email = "example1@gmail.com";
-        secondContact.phoneNumber = "555-554-2315";
-
-        thirdContact.name = "Russell";
-        thirdContact.email = "example2@gmail.com";
-        thirdContact.phoneNumber = "555-534-1367";
-
-        fourthContact.name = "Amanda";
-        fourthContact.email = "example3@gmail.com";
-        fourthContact.phoneNumber = "554-754-6871";
-
-        myContactManager.addContact(firstContact);
-        myContactManager.addContact(secondContact);
-        myContactManager.addContact(thirdContact);
-        myContactManager.addContact(fourthContact);
-
-
-        for (Contact c : myContactManager.myFriends)
+        System.out.println("Welcome to Colton's contact manager. Please chose an option:");
+        System.out.println("1: Add Contact via text file");
+        System.out.println("2: Add Contact via hand");
+        System.out.println("3: Search Contact");
+        System.out.println("4: List All Contact");
+        Scanner scanner = new Scanner(System.in);
+        int option = scanner.nextInt();
+        switch (option)
         {
-            if (c == null) break;
-            String string = String.format("My friend %s's phone number is %s and email is %s.",c.name, c.phoneNumber, c.email);
-            System.out.println(string);
-            i++;
+            case 1:
+
+
+                break;
+            case 2:
+                System.out.println("Add Contact: Enter name, email and phone number as comma separated list.");
+                scanner = new Scanner(System.in);
+                String inputContact = scanner.nextLine();
+                String delims = "[,]";
+                String[] contactTokens = inputContact.split(delims);
+                Contact contact = new Contact(contactTokens[0],contactTokens[1],contactTokens[2]);
+                myContactManager.addContact(contact);
+                break;
+
+            case 3:
+                break;
+
+            case 4:
+                int i = 0;
+                for (Contact c : myContactManager.myFriends)
+                {
+                    if (c == null) break;
+                    String string = String.format("My friend %s's phone number is %s and email is %s.",c.name, c.phoneNumber, c.email);
+                    System.out.println(string);
+                    i++;
+                }
+                break;
         }
+
+
+
+
     }
 }
 
