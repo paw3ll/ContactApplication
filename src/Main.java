@@ -1,7 +1,6 @@
-import java.lang.reflect.Type;
-import java.text.MessageFormat;
 import java.util.Scanner;
 import java.io.File;
+import java.io.FileNotFoundException;
 
 public class Main
 {
@@ -18,8 +17,8 @@ public class Main
         switch (option)
         {
             case 1:
-                File file = new File("contactlist.txt");
-                Scanner scanner = new Scanner(file);
+                FileOps fileops = new FileOps();
+                fileops.ReadFile();
 
                 break;
             case 2:
@@ -46,10 +45,7 @@ public class Main
                 }
                 break;
         }
-
-
-
-
     }
 }
+
 
