@@ -1,0 +1,34 @@
+Fields
+    - Declare all fields as private if possible.
+    - Create a constructor that accepts those private fields as input.
+    - Create a public method that sets each private field, this way you will know when you are changing a field. (Setter)
+    - Create a public method that returns those private fields, this way ou know when you will read without changing. (Getter)
+
+Example:
+Public Class Book 
+{
+    Private string title;
+    Private string author;
+    Private boolean isBorrowed;
+
+    Public Book(string title, string author)
+    {
+        this.title = title;
+        this.author = author;
+    }
+
+    Public void borrowBook()
+    {
+        isBorrowed = true;
+    }
+
+    Public void returnBook()
+    {
+        isBorrowed = false;
+    }
+
+    Public boolean isBookBorrowed()
+    {
+        reutrn isBorrowed;
+    }
+}

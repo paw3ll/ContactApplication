@@ -1,0 +1,12 @@
+// Variable Types (Numbers)
+int maxInt = 2147483647;
+long maxLong = 2147483647*100000000;
+double fraction = 99.275; // Can store pretty much anything.
+
+// Variable Types (Text)
+string fullText = "This is a full stored string.";
+char singleChar = 'b';
+
+// Variable Types (decision)
+boolean fact = true;
+boolean checkBox = false;

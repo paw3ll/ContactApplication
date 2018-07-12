@@ -1,0 +1,11 @@
+Java Scanner
+    - Input Java.util.scanner. Scanner is used to read user input and save it into a variable.
+    - File scanner can also be used to accept text from a file (reading data from xml) i.e a java program that loads a list of expenses
+      from a file and after calculation prints a report.
+        - Use file instead of system.in
+        - Based read loop for file around hasNextLine().
+            Example: 
+            while (input.hasNextLine())
+            {
+                string input = input.NextLine();
+            }

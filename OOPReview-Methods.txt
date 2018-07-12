@@ -1,0 +1,6 @@
+Methods (Public & Private)
+    - Set all your classes to Public.
+    - Set all your fields to Private.
+    - Set any of your methods to public that are cosidered actions.
+    - Set any of your methods to private that are considered helpers.
+
